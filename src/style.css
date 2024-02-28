@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "NotoSerif-VariableFont";
+  src: url("./NotoSerif-VariableFont_wdth\,wght.ttf");
+}
+
+.hello {
+  font-family: "NotoSerif-VariableFont";
+  background-image: url("./family.png");
+  width: 250px;
+  padding: 20px;
+  color: #fff;
+}
