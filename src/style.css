@@ -1,12 +1,132 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #DDD;
+}
+
 @font-face {
   font-family: "NotoSerif-VariableFont";
   src: url("./NotoSerif-VariableFont_wdth\,wght.ttf");
 }
 
-.hello {
-  font-family: "NotoSerif-VariableFont";
-  background-image: url("./family.png");
-  width: 250px;
-  padding: 20px;
-  color: #fff;
+* {
+  box-sizing: border-box;
+}
+
+#header {
+  width: 100vw;
+  height: 60px;
+  background-color: #111827;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#nav-menu {
+  width: 100vw;
+}
+
+#nav-menu > #ul-link{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: #fffff0;
+  list-style: none;
+}
+
+.visible {
+  width: min-content;
+  padding: 15px;
+  background-color: #DDD;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  display: none;
+}
+
+#introduction-menu, 
+#about, #works, #polices, 
+#portfolio, #time, #product {
+  cursor: pointer;
+  color: #DDD;
+  
+}
+
+#introduction, #about-us,
+#our-works, #our-polices,
+#users, #for-us, #products {
+  padding: 10px;
+  background-color: #313438;
+  margin-top: 25px;
+  position: absolute;
+  cursor: pointer;
+}
+
+ul > li {
+  padding: 5px;
+  margin: 2px;
+  color: #d1d5db;
+  list-style: none;
+}
+
+#for-us {
+  right: 1px;
+  width: max(50%, 60vw);
+}
+
+/*Other dropdown*/
+
+main {
+  box-sizing: border-box;
+  padding: 35px;
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#dropdown {
+  background-color: #534235;
+  padding: 10px;
+  z-index: 1;
+  height: fit-content;
+  width:clamp(45ch, 80%, 75ch); 
+  position: absolute;
+  top: 115px;
+  right: 25px;
+
+}
+
+/*#btn-content {
+  background-image: url('./close.png');
+  background-image: url('./hamburger.png');
+}*/
+
+#btn-content {
+  align-self: flex-end;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  z-index: 6;
+  margin-top: 5rem;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+/*carrosssel*/
+
+.carroussel {
+  width: 900px;
+  display: flex;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  transition: 0.5s ease;
 }
