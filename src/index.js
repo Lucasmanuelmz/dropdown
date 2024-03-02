@@ -2,7 +2,6 @@ import './style.css';
 import HiddenAndVisibility from './print';
 import Hamburger from './hamburger.png';
 import Close from './close.png';
-import carroussel from './carroussel';
 
 function App() {
   const introductionMenu = document.querySelector('#introduction-menu');
@@ -78,7 +77,31 @@ function App() {
     isClose = !isClose;
     e.preventDefault();
   });
-  const newDiv = carroussel()
-  main.appendChild(newDiv);
+
+  const form = document.querySelector('form');
+  const email = document.querySelector('.email-pa');
+  const error = document.querySelector('.error');
+  const btn = document.querySelector('.enviar');
+
+  email.addEventListener('input', function (e) {
+    if (email.validity.valid) {
+
+      error.innerHTML = '';
+      error.className = 'error';
+    }
+  },
+  false,
+  )
+  form.addEventListener('submit', function(e) {
+    if (!email.validity.valid) {
+       
+      error.innerHTML = 'Por favor digite um email,valido';
+      error.className = 'error';
+    }
+    e.preventDefault()
+  },
+  false,
+  )
+
 }
 document.addEventListener('DOMContentLoaded', App);
